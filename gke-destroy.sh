@@ -14,7 +14,7 @@ echo '-------Deleting disks'
 for i in $(gcloud compute disks list --format="value(name)" --filter="yong-postgresql");do echo $i;gcloud compute disks delete $i --zone=$MY_ZONE -q;done
 
 echo '-------Deleting snapshots'
-for i in $(gcloud compute snapshots list --format="value(name)" --filter="$findmydisk");do echo $i;gcloud compute snapshots delete $i -q;done
+for i in $(gcloud compute snapshots list --format="value(name)" --filter="GCE-PD CSI Driver");do echo $i;gcloud compute snapshots delete $i -q;done
 
 echo '-------Deleting the bucket'
 myproject=$(gcloud config get-value core/project)
