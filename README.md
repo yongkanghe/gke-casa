@@ -1,7 +1,5 @@
 #### Follow [@YongkangHe](https://twitter.com/yongkanghe) on Twitter, Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
-1 CMD in 5 mins to build a ready-to-use GKE cluster with PostgreSQL installed (GKE+Postgresql). 
-
 I just want to build a GKE Cluster to play with the various Data Management capabilities e.g. Backup/Restore, Disaster Recovery and Application Mobility. It is challenging to create a GKE cluster from Google Cloud if you are not familiar to it. After the GKE Cluster is up running, we still need to install a sample DB etc.. The whole process is not that simple.
 
 This script based automation allows you to build a ready-to-use GKE cluster with PostgreSQL in about 5 minutes. For simplicity and cost optimization, the GKE cluster will have only one worker node and be built in the default vpc using the default subnet. This is bash shell based scripts which has been tested on Cloud Shell. Linux or MacOS terminal has not been tested though it might work as well. 
