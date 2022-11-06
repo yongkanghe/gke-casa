@@ -9,7 +9,7 @@ GKE_VERSION=$(gcloud container get-server-config --region us-central1 --flatten=
 
 gcloud container clusters create $MY_PREFIX-$MY_CLUSTER-$(date +%s) \
   --zone $MY_ZONE \
-  --num-nodes 2 \
+  --num-nodes 1 \
   --machine-type $MY_MACHINE_TYPE \
   --release-channel=rapid \
   --cluster-version $GKE_VERSION \
