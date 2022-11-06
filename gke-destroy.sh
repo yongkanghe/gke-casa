@@ -11,7 +11,7 @@ gcloud container clusters delete $gkeclustername --zone $MY_ZONE --quiet
 findmydisk=$(echo $MY_PREFIX-$MY_CLUSTER | head -c 12)
 
 echo '-------Deleting disks'
-for i in $(gcloud compute disks list --format="value(name)" --filter="$findmydisk");do echo $i;gcloud compute disks delete $i --zone=$MY_ZONE -q;done
+for i in $(gcloud compute disks list --format="value(name)" --filter="yong-postgresql");do echo $i;gcloud compute disks delete $i --zone=$MY_ZONE -q;done
 
 echo '-------Deleting snapshots'
 for i in $(gcloud compute snapshots list --format="value(name)" --filter="$findmydisk");do echo $i;gcloud compute snapshots delete $i -q;done
