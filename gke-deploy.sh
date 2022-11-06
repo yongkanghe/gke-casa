@@ -17,12 +17,13 @@ gcloud container clusters create $MY_PREFIX-$MY_CLUSTER-$(date +%s) \
   --addons=GcePersistentDiskCsiDriver \
   --enable-autoscaling --min-nodes 1 --max-nodes 3
 
+echo "" | awk '{print $1}'
 ./pg-deploy.sh
 
 endtime=$(date +%s)
 duration=$(( $endtime - $starttime ))
 echo "" | awk '{print $1}'
-echo "-------Total time to build a GKE cluster is $(($duration / 60)) minutes $(($duration % 60)) seconds."
+echo "-------Total time to build a GKE cluster with PostgreSQL is $(($duration / 60)) minutes $(($duration % 60)) seconds."
 echo "" | awk '{print $1}'
 echo "-------Created by Yongkang"
 echo "-------Email me if any suggestions or issues he@yongkang.cloud"
