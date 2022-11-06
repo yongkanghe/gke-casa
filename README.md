@@ -23,12 +23,14 @@ cd gke-casa;./createsa.sh
 vi setenv.sh
 ````
 
-5. To deploy a GKE cluster
+# GKE Cluster Automation 
+
+1. To deploy a GKE cluster
 ````
 ./gke-deploy.sh
 ````
 
-6. To destroy the GKE cluster after testing
+2. To destroy the GKE cluster after testing
 ````
 ./gke-destroy.sh
 ````
