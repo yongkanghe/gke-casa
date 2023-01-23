@@ -14,11 +14,7 @@ This script based automation allows you to build a ready-to-use GKE cluster with
 ````
 git clone https://github.com/yongkanghe/gke-casa.git
 ````
-3. Create gcloud service account first
-````
-cd gke-casa;./createsa.sh
-````
-4. Optionally, you can customize the clustername, machine-type, zone, region
+3. Optionally, you can customize the clustername, machine-type, zone, region
 ````
 vi setenv.sh
 ````
@@ -39,15 +35,12 @@ vi setenv.sh
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YwfPqR5phLM/0.jpg)](https://www.youtube.com/watch?v=YwfPqR5phLM)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
-# Build, Protect and Migrate Containers
-[![IMAGE ALT TEXT HERE](https://pbs.twimg.com/media/FK5rsaeXwAIEmtI?format=jpg&name=small)](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ)
+# 3 mins to enable GKE Containers Backup
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/hz8Ut7PaS0Y/0.jpg)](https://www.youtube.com/watch?v=hz8Ut7PaS0Y)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
 # CloudCasa - No. 1 Kubernetes Backup as a Service
 https://cloudcasa.io 
-
-# FREE Kubernetes Learning
-https://kubecampus.io 
 
 # Contributors
 #### Follow [Yongkang He](http://yongkang.cloud) on LinkedIn, Join [Kubernetes Data Management](https://www.linkedin.com/groups/13983251) LinkedIn Group
