@@ -4,7 +4,7 @@ I just want to build a GKE Cluster to play with the various Data Management capa
 
 This script based automation allows you to build a ready-to-use GKE cluster with PostgreSQL in about 5 minutes. For simplicity and cost optimization, the GKE cluster will have only one worker node and be built in the default vpc using the default subnet. This is bash shell based scripts which has been tested on Cloud Shell. Linux or MacOS terminal has not been tested though it might work as well. 
 
-# Create a Google Cloud Trial Account
+# Sign up a GCP Trial Account
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/rjZsH3IeSrE/0.jpg)](https://www.youtube.com/watch?v=rjZsH3IeSrE)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
