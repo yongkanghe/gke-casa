@@ -19,7 +19,7 @@ gcloud container clusters create $MY_PREFIX-$MY_CLUSTER-$(date +%s) \
   --enable-autoscaling --min-nodes 1 --max-nodes 3
 
 echo "" | awk '{print $1}'
-./pg-deploy.sh
+./postgresql-deploy.sh
 
 endtime=$(date +%s)
 duration=$(( $endtime - $starttime ))
