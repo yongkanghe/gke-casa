@@ -14,7 +14,11 @@ This script based automation allows you to build a ready-to-use GKE cluster with
 ````
 git clone https://github.com/yongkanghe/gke-casa.git;cd gke-casa
 ````
-3. Optionally, you can customize the clustername, machine-type, zone, region
+3. Enable GKE API if not enabled
+````
+./createsa.sh
+````
+4. Optionally, you can customize the clustername, machine-type, zone, region
 ````
 vi setenv.sh
 ````
