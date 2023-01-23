@@ -50,5 +50,5 @@ https://cloudcasa.io
 #### Follow [Yongkang He](http://yongkang.cloud) on LinkedIn
 #### Join [Kubernetes Data Management](https://www.linkedin.com/groups/13983251) LinkedIn Group
 #### Join [Kubernetes Data Management](http://t.k8sug.com) Telegram Group
-#### Join [Kubernetes Meetup User Group](http://k8sug.com)
+#### Join [Kubernetes Meetup](http://k8sug.com) User Group
 
