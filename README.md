@@ -12,7 +12,7 @@ This script based automation allows you to build a ready-to-use GKE cluster with
 1. Go to open Google Cloud Shell
 2. Clone the github repo to your local host, run below command
 ````
-git clone https://github.com/yongkanghe/gke-casa.git
+git clone https://github.com/yongkanghe/gke-casa.git;cd gke-casa
 ````
 3. Optionally, you can customize the clustername, machine-type, zone, region
 ````
