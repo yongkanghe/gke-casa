@@ -39,7 +39,7 @@ vi setenv.sh
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YwfPqR5phLM/0.jpg)](https://www.youtube.com/watch?v=YwfPqR5phLM)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
-# 3 mins to enable GKE Containers Backup
+# 3 mins to enable Containers Backup
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/hz8Ut7PaS0Y/0.jpg)](https://www.youtube.com/watch?v=hz8Ut7PaS0Y)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
