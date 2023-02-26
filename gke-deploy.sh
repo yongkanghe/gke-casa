@@ -6,7 +6,7 @@ FIRST2=$(echo -n $TEMP_PREFIX | head -c2)
 LAST2=$(echo -n $TEMP_PREFIX | tail -c2)
 MY_PREFIX=$(echo $FIRST2$LAST2)
 # GKE_K8S_VERSION=$(gcloud container get-server-config --region us-central1 --flatten="channels" --filter="channels.channel=RAPID" | grep $K8S_VERSION | awk '{print $2}' | sort -r | uniq | head -1)
-GKE_K8S_VERSION=1.26.0-gke.2000
+GKE_K8S_VERSION=1.26.1-gke.1500
 
 gcloud container clusters create $MY_PREFIX-$MY_CLUSTER-$(date +%s) \
   --zone $MY_ZONE \
