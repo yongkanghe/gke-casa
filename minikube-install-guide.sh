@@ -1,6 +1,8 @@
-#This guide is to help you quickly create a sandbox Kubernetes cluster via Minikube and later you can clean it up entirely by removing the VM created by multipass.
+#This guide is to help you quickly create a sandbox Kubernetes cluster via Minikube 
+#and later you can clean it up entirely by removing the VM created by multipass.
 
-#Install Multipass on Mac, for Windows or Linux, go https://multipass.run/install
+#Install Multipass on Mac
+#For Windows or Linux, go https://multipass.run/install
 brew install multipass
 
 #Launch an Ubuntu VM
@@ -12,7 +14,8 @@ multipass list
 #Shell into the Ubuntu VM
 multipass shell node4yong1
 
-#Install minikube on Ubuntu on Mac ARM, for Windows or Linux, go https://minikube.sigs.k8s.io/docs/start/
+#Install minikube on Ubuntu on Mac ARM
+#For Windows or Linux, go https://minikube.sigs.k8s.io/docs/start/
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
 sudo install minikube-linux-arm64 /usr/local/bin/minikube
 
