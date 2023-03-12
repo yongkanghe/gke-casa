@@ -1,5 +1,5 @@
 #This guide is to help you quickly create a sandbox Kubernetes cluster via Minikube 
-#and later you can clean it up entirely by removing the VM created by multipass.
+#And later you can clean it up entirely by removing the VM created by multipass.
 
 #Install Multipass on Mac
 #For Windows or Linux, go https://multipass.run/install
