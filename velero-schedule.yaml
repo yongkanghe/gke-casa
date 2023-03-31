@@ -4,7 +4,7 @@ metadata:
   name: hourly4yong1
   namespace: velero
 spec:
-  schedule: */10 * * * *
+  schedule: 0 * * * *
   template:
     includedNamespaces:
     - 'yong-postgresql'
@@ -21,9 +21,4 @@ spec:
     snapshotVolumes: null
     storageLocation: default
     volumeSnapshotLocations:
-      - default 
-    ttl: 24h0m0s
-status:
-  phase: ""
-  lastBackup:
-  validationErrors:
+      - default
