@@ -5,6 +5,7 @@ starttime=$(date +%s)
 velero uninstall --force
 sudo rm /usr/local/bin/velero
 gsutil rm -r gs://$(cat bucket4velero1) -f
+rm bucket4velero1
 gcloud iam service-accounts delete $(gcloud iam service-accounts list | grep vsa4yong1 | awk '{print $2}') -q
 
 endtime=$(date +%s)
