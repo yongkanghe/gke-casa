@@ -70,6 +70,7 @@ velero install \
     --secret-file ./yongsa4velero1
 
 echo "-------Backup yong-postgresql namespace"
+kubectl wait --for=condition=ready --timeout=180s -n velero pod -l component=velero
 velero backup create yong-postgresql-backup --include-namespaces yong-postgresql
 
 endtime=$(date +%s)
