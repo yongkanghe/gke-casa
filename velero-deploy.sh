@@ -72,14 +72,17 @@ velero install \
     --bucket $(cat bucket4velero1) \
     --secret-file ./yongsa4velero1
 
-echo "-------Backup yong-postgresql namespace"
+echo "-------One time On-Demand Backup of yong-postgresql namespace"
 kubectl wait --for=condition=ready --timeout=180s -n velero pod -l component=velero
 velero backup create yong-postgresql-backup --include-namespaces yong-postgresql
+
+echo "-------Hourly scheduled backup of yong-postgresql namespace"
+kubectl create -f velero-schedule.yaml
 
 endtime=$(date +%s)
 duration=$(( $endtime - $starttime ))
 echo "" | awk '{print $1}'
-echo "-------Total time to build a GKE cluster with PostgreSQL is $(($duration / 60)) minutes $(($duration % 60)) seconds."
+echo "-------Total time to enable Velero backup for GKE is $(($duration / 60)) minutes $(($duration % 60)) seconds."
 echo "" | awk '{print $1}'
 echo "-------Created by Yongkang"
 echo "-------Email me if any suggestions or issues he@yongkang.cloud"
