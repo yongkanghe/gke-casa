@@ -1,4 +1,4 @@
-echo '-------Enable Velero for GKE Backup (typically in 3 mins)'
+echo '-------Deploy Velero for GKE Backup (typically in 3 mins)'
 starttime=$(date +%s)
 . ./setenv.sh
 
