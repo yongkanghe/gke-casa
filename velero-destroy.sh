@@ -7,12 +7,6 @@ velero uninstall --force
 # gsutil rm -r gs://$(cat bucket4velero1) -f
 # rm bucket4velero1
 # rm yongsa4velero1
-
-# export MY_PROJECT_ID=$(gcloud config get-value project)
-# MY_SERVICE_ACCOUNT_EMAIL=$(gcloud iam service-accounts list \
-#   --filter="displayName:Velero service account" \
-#   --format 'value(email)')
-# gcloud projects remove-iam-policy-binding $MY_PROJECT_ID --member=serviceAccount:$MY_SERVICE_ACCOUNT_EMAIL --role='roles/velero.server'
 # gcloud iam service-accounts delete $(gcloud iam service-accounts list | grep vsa4yong1 | awk '{print $2}') -q
 
 endtime=$(date +%s)
