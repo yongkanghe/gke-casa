@@ -58,7 +58,7 @@ if [ `echo $?` -eq 1 ];then
 
   gsutil iam ch serviceAccount:$MY_SERVICE_ACCOUNT_EMAIL:objectAdmin gs://$(cat bucket4velero1)
 
-  gcloud iam service-accounts keys create credentials-velero \
+  gcloud iam service-accounts keys create yongsa4velero1 \
     --iam-account $MY_SERVICE_ACCOUNT_EMAIL
 fi
 
@@ -67,7 +67,7 @@ velero install \
     --provider gcp \
     --plugins velero/velero-plugin-for-gcp:v1.6.0 \
     --bucket $(cat bucket4velero1) \
-    --secret-file ./credentials-velero
+    --secret-file ./yongsa4velero1
 
 echo "-------Backup yong-postgresql namespace"
 velero backup create yong-postgresql-backup --include-namespaces yong-postgresql
