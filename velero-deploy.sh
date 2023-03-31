@@ -47,10 +47,13 @@ if [ `echo $?` -eq 1 ];then
     iam.serviceAccounts.signBlob
   )
 
-  gcloud iam roles create velero.server \
-    --project $MY_PROJECT_ID \
-    --title "Velero Server" \
-    --permissions "$(IFS=","; echo "${ROLE_PERMISSIONS[*]}")"
+  gcloud iam roles list --project $MY_PROJECT_ID | grep Velero
+  if [ `echo $?` -eq 1 ];then
+    gcloud iam roles create velero.server \
+      --project $MY_PROJECT_ID \
+      --title "Velero Server" \
+      --permissions "$(IFS=","; echo "${ROLE_PERMISSIONS[*]}")"
+  fi
 
   gcloud projects add-iam-policy-binding $MY_PROJECT_ID \
     --member serviceAccount:$MY_SERVICE_ACCOUNT_EMAIL \
