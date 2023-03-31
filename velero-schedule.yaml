@@ -14,11 +14,7 @@ spec:
     excludedResources:
     - storageclasses.storage.k8s.io
     includeClusterResources: null
-    labelSelector:
-      matchLabels:
-        app: velero
-        component: server
-    snapshotVolumes: null
+    snapshotVolumes: true
     storageLocation: default
     volumeSnapshotLocations:
       - default
