@@ -8,6 +8,7 @@ if [ ! -f velero ]; then
   tar -zxvf velero-v1.10.2-linux-amd64.tar.gz
   sudo mv velero-v1.10.2-linux-amd64/velero /usr/local/bin/
   sudo rm velero-v1.10.2-linux-amd64.tar.gz
+  sudo rm -rf velero-v1.10.2-linux-amd64
 fi
 
 echo "-------Create a GCS storage bucket if not exist"
@@ -18,17 +19,19 @@ if [ `echo $?` -eq 1 ];then
 fi
 
 echo "-------Create a service account for velero"
-export MY_PROJECT_ID=$(gcloud config get-value project)
-MY_GSA_NAME=vsa4yong1
+gcloud iam service-accounts list | grep vsa4yong1
+if [ `echo $?` -eq 1 ];then
+  export MY_PROJECT_ID=$(gcloud config get-value project)
+  MY_GSA_NAME=vsa4yong1
 
-gcloud iam service-accounts create $MY_GSA_NAME \
+  gcloud iam service-accounts create $MY_GSA_NAME \
     --display-name "Velero service account"
 
-MY_SERVICE_ACCOUNT_EMAIL=$(gcloud iam service-accounts list \
-  --filter="displayName:Velero service account" \
-  --format 'value(email)')
+  MY_SERVICE_ACCOUNT_EMAIL=$(gcloud iam service-accounts list \
+    --filter="displayName:Velero service account" \
+    --format 'value(email)')
 
-ROLE_PERMISSIONS=(
+  ROLE_PERMISSIONS=(
     compute.disks.get
     compute.disks.create
     compute.disks.createSnapshot
@@ -42,21 +45,22 @@ ROLE_PERMISSIONS=(
     storage.objects.get
     storage.objects.list
     iam.serviceAccounts.signBlob
-)
+  )
 
-gcloud iam roles create velero.server \
+  gcloud iam roles create velero.server \
     --project $MY_PROJECT_ID \
     --title "Velero Server" \
     --permissions "$(IFS=","; echo "${ROLE_PERMISSIONS[*]}")"
 
-gcloud projects add-iam-policy-binding $MY_PROJECT_ID \
+  gcloud projects add-iam-policy-binding $MY_PROJECT_ID \
     --member serviceAccount:$MY_SERVICE_ACCOUNT_EMAIL \
     --role projects/$MY_PROJECT_ID/roles/velero.server
 
-gsutil iam ch serviceAccount:$MY_SERVICE_ACCOUNT_EMAIL:objectAdmin gs://$(cat bucket4velero1)
+  gsutil iam ch serviceAccount:$MY_SERVICE_ACCOUNT_EMAIL:objectAdmin gs://$(cat bucket4velero1)
 
-gcloud iam service-accounts keys create credentials-velero \
+  gcloud iam service-accounts keys create credentials-velero \
     --iam-account $MY_SERVICE_ACCOUNT_EMAIL
+fi
 
 echo "-------Install velero using the SA"
 velero install \
