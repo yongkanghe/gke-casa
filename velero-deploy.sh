@@ -3,7 +3,7 @@ starttime=$(date +%s)
 . ./setenv.sh
 
 echo "-------Download and Install verlero CLI if needed"
-if [ ! -f velero ]; then
+if [ ! -f /usr/local/bin/velero ]; then
   wget https://github.com/vmware-tanzu/velero/releases/download/v1.10.2/velero-v1.10.2-linux-amd64.tar.gz
   tar -zxvf velero-v1.10.2-linux-amd64.tar.gz
   sudo mv velero-v1.10.2-linux-amd64/velero /usr/local/bin/
