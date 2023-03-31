@@ -3,10 +3,11 @@ starttime=$(date +%s)
 . ./setenv.sh
 
 velero uninstall --force
-sudo rm /usr/local/bin/velero
-gsutil rm -r gs://$(cat bucket4velero1) -f
-rm bucket4velero1
-rm yongsa4velero1
+# sudo rm /usr/local/bin/velero
+# gsutil rm -r gs://$(cat bucket4velero1) -f
+# rm bucket4velero1
+# rm yongsa4velero1
+
 # export MY_PROJECT_ID=$(gcloud config get-value project)
 # MY_SERVICE_ACCOUNT_EMAIL=$(gcloud iam service-accounts list \
 #   --filter="displayName:Velero service account" \
