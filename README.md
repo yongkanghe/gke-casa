@@ -34,6 +34,19 @@ vi setenv.sh
 ````
 ./gke-destroy.sh
 ````
+
+# Velero for GKE Automation 
+
+1. 1 min to enable GKE Backup via Velero
+````
+./velero-deploy.sh
+````
+
+2. To clean up Velero for GKE
+````
+./velero-destroy.sh
+````
+
 # GKE 1.26 Automation video
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zqr9emi-1Ks/0.jpg)](https://www.youtube.com/watch?v=zqr9emi-1Ks)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
@@ -42,7 +55,11 @@ vi setenv.sh
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YwfPqR5phLM/0.jpg)](https://www.youtube.com/watch?v=YwfPqR5phLM)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
-# 3 mins to enable Containers Backup
+# 1 min to enable Containers Backup via Velero
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9E4I1BaygUM/0.jpg)](https://www.youtube.com/watch?v=9E4I1BaygUM)
+#### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
+
+# 3 mins to enable Containers Backup via CloudCasa
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/hz8Ut7PaS0Y/0.jpg)](https://www.youtube.com/watch?v=hz8Ut7PaS0Y)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
