@@ -35,6 +35,10 @@ vi setenv.sh
 ./gke-destroy.sh
 ````
 
+# GKE 1.26 Automation video
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zqr9emi-1Ks/0.jpg)](https://www.youtube.com/watch?v=zqr9emi-1Ks)
+#### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
+
 # Velero for GKE Automation 
 
 1. 1 min to enable GKE Backup via Velero
@@ -47,14 +51,6 @@ vi setenv.sh
 ./velero-destroy.sh
 ````
 
-# GKE 1.26 Automation video
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zqr9emi-1Ks/0.jpg)](https://www.youtube.com/watch?v=zqr9emi-1Ks)
-#### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
-
-# Build a GKE cluster via Web UI
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YwfPqR5phLM/0.jpg)](https://www.youtube.com/watch?v=YwfPqR5phLM)
-#### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
-
 # 1 min to enable Containers Backup via Velero
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/9E4I1BaygUM/0.jpg)](https://www.youtube.com/watch?v=9E4I1BaygUM)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
@@ -65,6 +61,10 @@ vi setenv.sh
 
 # 30 mins to enable Backup for GKE
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/H0UNvG_CJwk/0.jpg)](https://www.youtube.com/watch?v=H0UNvG_CJwk)
+#### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
+
+# Build a GKE cluster via Web UI
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YwfPqR5phLM/0.jpg)](https://www.youtube.com/watch?v=YwfPqR5phLM)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
 # CloudCasa - Best Kubernetes Backup as a Service
