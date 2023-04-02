@@ -67,6 +67,7 @@ fi
 
 echo "-------Install velero using the SA"
 velero install \
+    --features=EnableCSI \
     --provider gcp \
     --plugins velero/velero-plugin-for-gcp:v1.6.0 \
     --bucket $(cat bucket4velero1) \
