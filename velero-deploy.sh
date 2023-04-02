@@ -67,11 +67,13 @@ fi
 
 echo "-------Install velero using the SA"
 velero install \
-    --features=EnableCSI \
     --provider gcp \
-    --plugins velero/velero-plugin-for-gcp:v1.6.0,velero/velero-plugin-for-csi:v0.3.0 \
+    --plugins velero/velero-plugin-for-gcp:v1.6.0 \
     --bucket $(cat bucket4velero1) \
     --secret-file ./yongsa4velero1
+
+# --features=EnableCSI \
+#     --plugins velero/velero-plugin-for-gcp:v1.6.0,velero/velero-plugin-for-csi:v0.3.0 \
 
 echo "-------One time On-Demand Backup of yong-postgresql namespace"
 kubectl wait --for=condition=ready --timeout=180s -n velero pod -l component=velero
