@@ -4,7 +4,7 @@ starttime=$(date +%s)
 
 velero uninstall --force
 # gsutil rm -r gs://$(cat bucket4velero1)
-gsutil rm -a gs://$(cat bucket4velero1)/**
+gsutil rm -m -a gs://$(cat bucket4velero1)/**
 # rm bucket4velero1
 rm yongsa4velero1
 gcloud iam service-accounts delete $(gcloud iam service-accounts list | grep vsa4yong1 | awk '{print $2}') -q
