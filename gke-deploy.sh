@@ -4,7 +4,7 @@ starttime=$(date +%s)
 TEMP_PREFIX=$(echo $(whoami) | sed -e 's/\_//g' | sed -e 's/\.//g' | awk '{print tolower($0)}')
 FIRST3=$(echo -n $TEMP_PREFIX | head -c3)
 LAST3=$(echo -n $TEMP_PREFIX | tail -c3)
-MY_PREFIX=$(echo $FIRST2$LAST2)
+MY_PREFIX=$(echo $FIRST3$LAST3)
 # GKE_K8S_VERSION=$(gcloud container get-server-config --region us-central1 --flatten="channels" --filter="channels.channel=RAPID" | grep $K8S_VERSION | awk '{print $2}' | sort -r | uniq | head -1)
 GKE_K8S_VERSION=1.27.1-gke.400
 #GKE_K8S_VERSION=1.26.1-gke.1500
