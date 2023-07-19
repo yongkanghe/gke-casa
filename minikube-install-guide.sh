@@ -6,7 +6,7 @@
 brew install multipass
 
 #Launch an Ubuntu VM
-multipass launch --name node4yong1 --cpus 2 --memory 2Gi --disk 20G
+multipass launch --name node4yong1 --cpus 2 --memory 2G --disk 20G
 
 #Verify if the Ubuntu VM is running on Mac
 multipass list
