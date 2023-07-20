@@ -25,14 +25,14 @@ minikube version
 #Start minikube instance 1st attempt
 minikube start
 
-#Install podman on Ubuntu, skip Install docker if podman installed
-sudo apt update
-sudo apt install podman -y
-
-#Install docker on Ubuntu if podman not installed
+#Option 1, Install docker on Ubuntu
 sudo apt update
 sudo apt install docker.io -y
 sudo usermod -aG docker $USER && newgrp docker
+
+#Option 2, Install podman on Ubuntu
+sudo apt update
+sudo apt install podman -y
 
 #Start minikube instance again
 minikube start
