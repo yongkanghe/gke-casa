@@ -38,14 +38,15 @@ sudo apt install podman -y
 minikube start
 
 #Verify if minikube is running and Kubernetes version
-minikube kubectl -- get nodes
-minikube kubectl -- get pods -A
-minikube kubectl -- get sc
+alias kubectl='minikube kubectl --'
+kubectl get nodes
+kubectl get pods -A
+kubectl get sc
 
 #Try to deploy an app on minikube
-minikube kubectl -- create deployment mydeploy1 --image=nginx
-minikube kubectl -- get deployment
-minikube kubectl -- get pods -A
+kubectl create deployment mydeploy1 --image=nginx
+kubectl get deployment
+kubectl get pods -A
 
 #Clean up the environment
 #Exit from Ubuntu Shell
