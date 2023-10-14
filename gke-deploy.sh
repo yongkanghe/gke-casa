@@ -5,8 +5,10 @@ TEMP_PREFIX=$(echo $(whoami) | sed -e 's/\_//g' | sed -e 's/\.//g' | awk '{print
 FIRST3=$(echo -n $TEMP_PREFIX | head -c3)
 LAST3=$(echo -n $TEMP_PREFIX | tail -c3)
 MY_PREFIX=$(echo $FIRST3$LAST3)
-# GKE_K8S_VERSION=$(gcloud container get-server-config --region us-central1 --flatten="channels" --filter="channels.channel=RAPID" | grep $K8S_VERSION | awk '{print $2}' | sort -r | uniq | head -1)
-GKE_K8S_VERSION=1.27.2-gke.1200
+GKE_K8S_VERSION=$(gcloud container get-server-config --region us-central1 --flatten="channels" --filter="channels.channel=RAPID" | grep $K8S_V
+ERSION | awk '{print $2}' | sort -r | uniq | head -1)
+#GKE_K8S_VERSION=1.28.1-gke.1066000
+#GKE_K8S_VERSION=1.27.2-gke.1200
 #GKE_K8S_VERSION=1.26.1-gke.1500
 
 gcloud container clusters create $MY_PREFIX-$MY_CLUSTER-$(date +%s) \
