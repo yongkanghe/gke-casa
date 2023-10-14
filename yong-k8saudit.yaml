@@ -1,5 +1,6 @@
 driver:
   enabled: true
+  kind: ebpf
 
 collectors:
   enabled: true
