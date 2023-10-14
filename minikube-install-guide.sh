@@ -6,7 +6,7 @@
 brew install multipass
 
 #Launch an Ubuntu VM
-multipass launch --name node4yong1 --cpus 2 --memory 2Gi --disk 20G
+multipass launch --name node4yong1 --cpus 2 --memory 2G --disk 20G
 
 #Verify if the Ubuntu VM is running on Mac
 multipass list
@@ -25,7 +25,12 @@ minikube version
 #Start minikube instance 1st attempt
 minikube start
 
-#Install podman on Ubuntu
+#Option 1, Install docker on Ubuntu
+sudo apt update
+sudo apt install docker.io -y
+sudo usermod -aG docker $USER && newgrp docker
+
+#Option 2, Install podman on Ubuntu
 sudo apt update
 sudo apt install podman -y
 
@@ -33,14 +38,15 @@ sudo apt install podman -y
 minikube start
 
 #Verify if minikube is running and Kubernetes version
-minikube kubectl -- get nodes
-minikube kubectl -- get pods -A
-minikube kubectl -- get sc
+alias kubectl='minikube kubectl --'
+kubectl get nodes
+kubectl get pods -A
+kubectl get sc
 
 #Try to deploy an app on minikube
-minikube kubectl -- create deployment mydeploy1 --image=nginx
-minikube kubectl -- get deployment
-minikube kubectl -- get pods -A
+kubectl create deployment mydeploy1 --image=nginx
+kubectl get deployment
+kubectl get pods -A
 
 #Clean up the environment
 #Exit from Ubuntu Shell
