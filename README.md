@@ -39,6 +39,12 @@ vi setenv.sh
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zqr9emi-1Ks/0.jpg)](https://www.youtube.com/watch?v=zqr9emi-1Ks)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
+# Secure GKE Containers via Falco 
+
+````
+./falco-deploy.sh
+````
+
 # Velero for GKE Automation 
 
 1. 1 min to enable GKE Backup via Velero
