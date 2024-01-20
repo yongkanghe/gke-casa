@@ -1,4 +1,4 @@
-echo '-------Creating a GKE Cluster only (typically in ~6 mins)'
+echo '-------Creating a GKE Cluster only (typically in ~7 mins)'
 starttime=$(date +%s)
 . ./setenv.sh
 TEMP_PREFIX=$(echo $(whoami) | sed -e 's/\_//g' | sed -e 's/\.//g' | awk '{print tolower($0)}')
