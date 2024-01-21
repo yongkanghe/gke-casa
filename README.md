@@ -36,7 +36,7 @@ vi setenv.sh
 ````
 
 # GKE Automation video
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/zqr9emi-1Ks/0.jpg)](https://www.youtube.com/watch?v=zqr9emi-1Ks)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/3rpgIMDW8F0/0.jpg)](https://www.youtube.com/watch?v=3rpgIMDW8F0)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
 # Secure GKE Containers via Falco 
