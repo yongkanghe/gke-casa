@@ -4,7 +4,7 @@ helm repo update kubearmor
 
 # Install KubeArmor
 helm upgrade --install kubearmor-operator kubearmor/kubearmor-operator -n yong-kubearmor --create-namespace 
-kubectl apply -f https://raw.githubusercontent.com/kubearmor/KubeArmor/main/pkg/KubeArmorOperator/config/samples/sample-config.yml
+kubectl apply -f ./kubearmor-sample-config.yaml
 
 # Install KubeArmor CLI
 curl -sfL http://get.kubearmor.io/ | sudo sh -s -- -b /usr/local/bin
