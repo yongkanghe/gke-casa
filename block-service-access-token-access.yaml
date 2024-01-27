@@ -2,6 +2,7 @@ apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
   name: block-service-access-token-access
+  namespace: yong-nginx
 spec:
   selector:
     matchLabels:
