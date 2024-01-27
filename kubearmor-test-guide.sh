@@ -25,7 +25,37 @@ curl https://$KUBERNETES_PORT_443_TCP_ADDR/api --insecure --header "Authorizatio
 kubectl apply -f ./block-service-access-token-access.yaml
 
 # Try to access the SA again
+kubectl exec -it $POD -n yong-nginx -- bash
+curl https://$KUBERNETES_PORT_443_TCP_ADDR/api --insecure --header "Authorization: Bearer $(cat /run/secrets/kubernetes.io/serviceaccount/token)"
+
 forbidden: User \"system:anonymous\" cannot get path \"/api\”
+
+# KubeArmor Test Case -3, audit access to folders/paths
+
+# Apply the policy to audit access to folders/paths
+kubectl apply -f ./audit-etc-nginx-access.yaml
+
+# Try to access /etc/nginx
+kubectl exec -it $POD -n yong-nginx -- bash -c "ls -l /etc/nginx"
+
+# Verify policy violations
+karmor logs -n yong-nginx
+
+# KubeArmor Test Case -4, allow only nginx to exec, deny the rest
+
+# Apply the policy to allow only nginx to exec, deny the rest
+kubectl apply -f ./only-allow-nginx-exec.yaml
+
+# Try to run command passwd
+kubectl exec -it $POD -n yong-nginx -- bash -c "passwd"
+
+# Verify policy violations
+karmor logs -n yong-nginx
+
+# Verify you can still access nginx web page
+kubectl port-forward $POD -n yong-nginx --address 0.0.0.0 8080:80
+
+
 
 
 

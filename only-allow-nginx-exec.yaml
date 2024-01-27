@@ -1,15 +1,19 @@
 apiVersion: security.kubearmor.com/v1
 kind: KubeArmorPolicy
 metadata:
-  name: audit-etc-nginx-access
+  name: only-allow-nginx-exec
   namespace: yong-nginx
 spec:
   selector:
     matchLabels:
-      app: nginx4yong1
+      app: nginx
   file:
     matchDirectories:
-    - dir: /etc/nginx/
-      recursive: true 
+    - dir: /
+      recursive: true  
+  process:
+    matchPaths:
+    - path: /usr/sbin/nginx
+    - path: /bin/bash
   action:
-    Audit
+    Allow
