@@ -37,6 +37,7 @@ kubectl apply -f ./audit-etc-nginx-access.yaml
 
 # Try to access /etc/nginx
 kubectl exec -it $POD -n yong-nginx -- bash -c "ls -l /etc/nginx"
+kubectl exec -it $POD -n yong-nginx -- bash -c "cat /etc/nginx/nginx.conf"
 
 # Verify policy violations
 karmor logs -n yong-nginx
@@ -46,8 +47,10 @@ karmor logs -n yong-nginx
 # Apply the policy to allow only nginx to exec, deny the rest
 kubectl apply -f ./only-allow-nginx-exec.yaml
 
-# Try to run command passwd
+# Try to run a few commands
 kubectl exec -it $POD -n yong-nginx -- bash -c "passwd"
+kubectl exec -it $POD -n yong-nginx -- bash -c "ls"
+kubectl exec -it $POD -n yong-nginx -- bash -c "chroot"
 
 # Verify policy violations
 karmor logs -n yong-nginx
@@ -55,7 +58,8 @@ karmor logs -n yong-nginx
 # Verify you can still access nginx web page
 kubectl port-forward $POD -n yong-nginx --address 0.0.0.0 8080:80
 
-
+# By default the security posture is set to audit. Lets change the security posture to default deny.
+kubectl annotate ns yong-nginx kubearmor-file-posture=block --overwrite
 
 
 
