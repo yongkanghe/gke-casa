@@ -38,8 +38,7 @@ curl https://$KUBERNETES_PORT_443_TCP_ADDR/api --insecure --header "Authorizatio
 kubectl apply -f ./audit-etc-nginx-access.yaml
 
 # Try to access /etc/nginx
-kubectl exec -it $POD -n yong-nginx -- bash -c "ls -l /etc/nginx"
-kubectl exec -it $POD -n yong-nginx -- bash -c "cat /etc/nginx/nginx.conf"
+kubectl exec -it $POD -n yong-nginx -- bash -c "head /etc/nginx/nginx.conf"
 
 # Verify policy violations
 karmor logs -n yong-nginx
