@@ -39,10 +39,24 @@ vi setenv.sh
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/3rpgIMDW8F0/0.jpg)](https://www.youtube.com/watch?v=3rpgIMDW8F0)
 #### Subscribe [K8s Data Management](https://www.youtube.com/channel/UCm-sw1b23K-scoVSCDo30YQ?sub_confirmation=1) Youtube Channel
 
-# Secure GKE Containers via Falco 
+# Secure GKE Containers via KubeArmor 
+Install KubeArmor via Automation
+````
+./karmor-deploy.sh
+````
+Uninstall KubeArmor via Automation
+````
+./karmor-destroy.sh
+````
 
+# Secure GKE Containers via Falco 
+Install Falco via Automation
 ````
 ./falco-deploy.sh
+````
+Uninstall Falco via Automation
+````
+./falco-destroy.sh
 ````
 
 # Velero for GKE Automation 
