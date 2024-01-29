@@ -34,6 +34,9 @@ curl https://$KUBERNETES_PORT_443_TCP_ADDR/api --insecure --header "Authorizatio
 # KubeArmor Test Case -3, audit access to folders/paths
 # Access to certain folders/paths might have to be audited for compliance/reporting reasons. Lets audit access to /etc/nginx/ folder within the deployment.
 
+# By default, File visibility disabled. Let's turn it on first
+kubectl annotate ns yong-nginx kubearmor-visibility="process, file, network" --overwrite
+
 # Apply the policy to audit access to folders/paths
 kubectl apply -f ./audit-etc-nginx-access.yaml
 
