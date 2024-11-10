@@ -14,7 +14,7 @@ gcloud container clusters create $MY_PREFIX-$MY_CLUSTER-$(date +%s) \
   --release-channel=rapid \
   --cluster-version $GKE_K8S_VERSION \
   --no-enable-basic-auth \
-  --addons=GcePersistentDiskCsiDriver \
+  --addons=GcePersistentDiskCsiDriver,BackupRestore \
   --enable-autoscaling --min-nodes 1 --max-nodes 3
 
 echo "" | awk '{print $1}'
